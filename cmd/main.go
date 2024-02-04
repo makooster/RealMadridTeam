@@ -17,6 +17,7 @@ func main() {
 	router.HandleFunc("/players", handlers.GetPlayers).Methods("GET")
 	router.HandleFunc("/players/last_name/{last_name}", handlers.GetPlayerByName).Methods("GET")
 	router.HandleFunc("/players/{id}", handlers.GetPlayerByID).Methods("GET")
+	router.HandleFunc("/players/number/{number}", handlers.GetPlayerByNumber).Methods("GET")
 	router.HandleFunc("/health-checking", handlers.HealthCheck).Methods("GET")
 	router.HandleFunc("/players/position/{position}", handlers.GetPlayersByPosition).Methods("GET")
 	router.HandleFunc("/players/nation/{nation}", handlers.GetPlayersByNation).Methods("GET")
